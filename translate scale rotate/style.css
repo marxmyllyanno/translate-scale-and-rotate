@@ -1,0 +1,105 @@
+:root {
+    --primary-color: #0A1026;
+    --white-color: #fff;
+    --light-gray-color: #EEEEEE;
+    --secondary-color: crimson;
+    --gap: 3rem;
+}
+
+.grid-one-content {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.grid-main-heading {
+    margin-bottom: 1rem;
+}
+
+.grid-description {
+    padding-bottom: 5rem;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--gap);
+    counter-reset: grid-counter;
+}
+
+.gallery-img {
+    width: 100%;
+    max-width: 36rem;
+    max-height: 36rem;
+    overflow: hidden;
+}
+
+.gallery-img img {
+    transition: all 360ms ease-in-out; /* transição para todas as imagens com 360ms de tempo de resposta, ease in out é o nome do efeito */
+
+}
+
+.gallery-img img:hover {
+    transform: translate(-3%, 3%) scale(1.2) rotate(5deg) /* -3%, 3% faz com que vá pra baixo + esquerda, e o scale faz a imagem crescer, dando o efeito apresentado na pagina, e o rotate faz a rotação, nesse caso, 5 graus */;
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+} 
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 2rem;
+    color: var(--primary-color);
+    line-height: 1.5;
+
+}
+h2 {
+    font-family: 'Montserrat', sans-serif;
+}
+
+h2 {
+    font-size: 6rem;
+    margin-bottom: 5rem;
+    text-transform: uppercase;
+    line-height: 1.2;
+}
+
+p {
+    margin-bottom: 2.5rem;
+}
+
+.grid-one-content h2 {
+    margin-bottom: 1rem;
+}
+
+.main-bg {
+    background-image: url(../img/main-bg.svg);
+    background-size: cover;
+    background-position: center center;
+    color: var(--white-color);
+    /* até agora: a imagem no background tem um tom escuro, e o "color white" serve para que todo texto escrito neste background seja branco */
+}
+
+.white-bg {
+    background: var(--white-color);
+    color: var(--primary-color);
+}
+
+.main-content {
+    max-width: 120rem;
+    margin: 0 auto;
+    padding: 10rem var(--gap);
+}
+
+.section {
+    min-height: 100vh;
+}
